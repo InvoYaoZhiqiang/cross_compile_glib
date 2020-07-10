@@ -1,0 +1,34 @@
+  CC C编译器命令
+  CFLAGS C编译器标志
+  LDFLAGS链接器标志，例如-L <lib dir>，如果您在
+              非标准目录<lib dir>
+  LIBS库传递给链接器，例如-l <库>
+  CPPFLAGS（客观）C / C ++预处理器标志，例如-I <include dir>如果
+              您在非标准目录<include dir>中具有标题
+  CPP C预处理器
+  CXX C ++编译器命令
+  CXXFLAGS C ++编译器标志
+  PKG_CONFIG到pkg-config实用程序的路径
+  PKG_CONFIG_PATH
+              要添加到pkg-config的搜索路径的目录
+  PKG_CONFIG_LIBDIR
+              覆盖pkg-config的内置搜索路径的路径
+  PYTHON Python解释器
+  ZLIB的ZLIB_CFLAGS C编译器标志，覆盖pkg-config
+  ZLIB的ZLIB_LIBS链接器标志，覆盖pkg-config
+  LIBFFI_CFLAGS
+              LIBFFI的C编译器标志，覆盖pkg-config
+  LIBFFI的LIBFFI_LIBS链接器标志，覆盖pkg-config
+  CXXCPP C ++预处理器
+  LIBELF_CFLAGS
+              LIBELF的C编译器标志，覆盖pkg-config
+  LIBELF的LIBELF_LIBS链接器标志，覆盖pkg-config
+  PCRE的PCRE_CFLAGS C编译器标志，覆盖pkg-config
+  PCRE的PCRE_LIBS链接器标志，覆盖pkg-config
+  GTKDOC_DEPS_CFLAGS
+              GTKDOC_DEPS的C编译器标志，覆盖pkg-config
+  GTKDOC_DEPS_LIBS
+              GTKDOC_DEPS的链接器标志，覆盖pkg-config
+  DBUS1_CFLAGS
+              DBUS1的C编译器标志，覆盖pkg-config
+  DBUS1的DBUS1_LIBS链接器标志，覆盖pkg-config
