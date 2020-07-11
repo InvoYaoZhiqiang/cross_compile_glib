@@ -3,7 +3,7 @@
 GLIB_INSTALL_PATH=~/cross-dbus/glib-2.45.8-install
 ZLIB_DIR=~/cross-dbus/zlib
 LIBFFI_DIR=~/cross-dbus/libffi
-LIBTOOL_DIR=~/cross-dbus/libtool
+#LIBTOOL_DIR=~/cross-dbus/libtool
 #COMPILE_PREFIX=/opt/fslc-wayland/2.5.2/sysroots/x86_64-fslcsdk-linux/usr/bin/aarch64-fslc-linux
 
 ./configure --host=arm-fslc-linux-gnueabi \

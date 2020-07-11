@@ -1,4 +1,4 @@
-prefix=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr
+prefix=/home/wanji/cross-dbus/zlib-1.2.11/../zlib
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 sharedlibdir=${libdir}

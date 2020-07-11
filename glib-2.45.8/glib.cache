@@ -53,7 +53,7 @@ ac_cv_env_CCC_value=
 ac_cv_env_CC_set=set
 ac_cv_env_CC_value='aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux'
 ac_cv_env_CFLAGS_set=set
-ac_cv_env_CFLAGS_value='-I/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/include -I/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/include'
+ac_cv_env_CFLAGS_value=' -O2 -pipe -g -feliminate-unused-debug-types '
 ac_cv_env_CPPFLAGS_set=set
 ac_cv_env_CPPFLAGS_value=
 ac_cv_env_CPP_set=set
@@ -81,9 +81,9 @@ ac_cv_env_LIBELF_LIBS_value=
 ac_cv_env_LIBFFI_CFLAGS_set=set
 ac_cv_env_LIBFFI_CFLAGS_value=-I/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/include
 ac_cv_env_LIBFFI_LIBS_set=set
-ac_cv_env_LIBFFI_LIBS_value='-L/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/lib -lffi'
-ac_cv_env_LIBS_set=set
-ac_cv_env_LIBS_value='-L/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/lib -lffi -lz'
+ac_cv_env_LIBFFI_LIBS_value=-lffi
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
 ac_cv_env_LT_SYS_LIBRARY_PATH_set=
 ac_cv_env_LT_SYS_LIBRARY_PATH_value=
 ac_cv_env_PCRE_CFLAGS_set=
@@ -98,10 +98,10 @@ ac_cv_env_PKG_CONFIG_set=
 ac_cv_env_PKG_CONFIG_value=
 ac_cv_env_PYTHON_set=
 ac_cv_env_PYTHON_value=
-ac_cv_env_ZLIB_CFLAGS_set=
-ac_cv_env_ZLIB_CFLAGS_value=
-ac_cv_env_ZLIB_LIBS_set=
-ac_cv_env_ZLIB_LIBS_value=
+ac_cv_env_ZLIB_CFLAGS_set=set
+ac_cv_env_ZLIB_CFLAGS_value=-I/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/include
+ac_cv_env_ZLIB_LIBS_set=set
+ac_cv_env_ZLIB_LIBS_value=-lz
 ac_cv_env_build_alias_set=
 ac_cv_env_build_alias_value=
 ac_cv_env_host_alias_set=set
@@ -245,6 +245,7 @@ ac_cv_header_strings_h=${ac_cv_header_strings_h=yes}
 ac_cv_header_sys_event_h=${ac_cv_header_sys_event_h=no}
 ac_cv_header_sys_filio_h=${ac_cv_header_sys_filio_h=no}
 ac_cv_header_sys_inotify_h=${ac_cv_header_sys_inotify_h=yes}
+ac_cv_header_sys_mkdev_h=${ac_cv_header_sys_mkdev_h=no}
 ac_cv_header_sys_mntctl_h=${ac_cv_header_sys_mntctl_h=no}
 ac_cv_header_sys_mnttab_h=${ac_cv_header_sys_mnttab_h=no}
 ac_cv_header_sys_mount_h=${ac_cv_header_sys_mount_h=yes}
@@ -256,9 +257,10 @@ ac_cv_header_sys_stat_h=${ac_cv_header_sys_stat_h=yes}
 ac_cv_header_sys_statfs_h=${ac_cv_header_sys_statfs_h=yes}
 ac_cv_header_sys_statvfs_h=${ac_cv_header_sys_statvfs_h=yes}
 ac_cv_header_sys_sysctl_h=${ac_cv_header_sys_sysctl_h=yes}
+ac_cv_header_sys_sysmacros_h=${ac_cv_header_sys_sysmacros_h=yes}
 ac_cv_header_sys_time_h=${ac_cv_header_sys_time_h=yes}
 ac_cv_header_sys_types_h=${ac_cv_header_sys_types_h=yes}
-ac_cv_header_sys_types_h_makedev=${ac_cv_header_sys_types_h_makedev=yes}
+ac_cv_header_sys_types_h_makedev=${ac_cv_header_sys_types_h_makedev=no}
 ac_cv_header_sys_vfs_h=${ac_cv_header_sys_vfs_h=yes}
 ac_cv_header_sys_vfstab_h=${ac_cv_header_sys_vfstab_h=no}
 ac_cv_header_sys_vmount_h=${ac_cv_header_sys_vmount_h=no}
@@ -312,13 +314,14 @@ ac_cv_path_PYTHON=${ac_cv_path_PYTHON=/usr/bin/python}
 ac_cv_path_SED=${ac_cv_path_SED=sed}
 ac_cv_path_XGETTEXT=${ac_cv_path_XGETTEXT=/usr/bin/xgettext}
 ac_cv_path_XMLCATALOG=${ac_cv_path_XMLCATALOG=/opt/fslc-wayland/2.5.2/sysroots/x86_64-fslcsdk-linux/usr/bin/xmlcatalog}
+ac_cv_path_XSLTPROC=${ac_cv_path_XSLTPROC=/usr/bin/xsltproc}
 ac_cv_path_ac_pt_PKG_CONFIG=${ac_cv_path_ac_pt_PKG_CONFIG=/opt/fslc-wayland/2.5.2/sysroots/x86_64-fslcsdk-linux/usr/bin/pkg-config}
 ac_cv_path_install=${ac_cv_path_install='/usr/bin/install -c'}
 ac_cv_path_lt_DD=${ac_cv_path_lt_DD=/bin/dd}
 ac_cv_path_mkdir=${ac_cv_path_mkdir=/bin/mkdir}
 ac_cv_pread=${ac_cv_pread=no}
 ac_cv_prog_AR=${ac_cv_prog_AR=aarch64-fslc-linux-ar}
-ac_cv_prog_AWK=${ac_cv_prog_AWK=mawk}
+ac_cv_prog_AWK=${ac_cv_prog_AWK=gawk}
 ac_cv_prog_CC=${ac_cv_prog_CC='aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux'}
 ac_cv_prog_CPP=${ac_cv_prog_CPP='aarch64-fslc-linux-gcc -E  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux'}
 ac_cv_prog_CXX=${ac_cv_prog_CXX='aarch64-fslc-linux-g++  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux'}
@@ -517,7 +520,7 @@ lt_cv_prog_compiler_pic_CXX=${lt_cv_prog_compiler_pic_CXX='-fPIC -DPIC'}
 lt_cv_prog_compiler_pic_works=${lt_cv_prog_compiler_pic_works=yes}
 lt_cv_prog_compiler_pic_works_CXX=${lt_cv_prog_compiler_pic_works_CXX=yes}
 lt_cv_prog_compiler_rtti_exceptions=${lt_cv_prog_compiler_rtti_exceptions=no}
-lt_cv_prog_compiler_static_works=${lt_cv_prog_compiler_static_works=no}
+lt_cv_prog_compiler_static_works=${lt_cv_prog_compiler_static_works=yes}
 lt_cv_prog_compiler_static_works_CXX=${lt_cv_prog_compiler_static_works_CXX=no}
 lt_cv_prog_gnu_ld=${lt_cv_prog_gnu_ld=yes}
 lt_cv_prog_gnu_ldcxx=${lt_cv_prog_gnu_ldcxx=yes}
@@ -538,9 +541,9 @@ mysql_cv_func_atomic_sub=${mysql_cv_func_atomic_sub=no}
 nano_cv_func_regexec_segv_emptystr=${nano_cv_func_regexec_segv_emptystr=no}
 php_cv_lib_cookie_io_functions_use_off64_t=${php_cv_lib_cookie_io_functions_use_off64_t=yes}
 pkg_cv_LIBFFI_CFLAGS=${pkg_cv_LIBFFI_CFLAGS=-I/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/include}
-pkg_cv_LIBFFI_LIBS=${pkg_cv_LIBFFI_LIBS='-L/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/lib -lffi'}
-pkg_cv_ZLIB_CFLAGS=${pkg_cv_ZLIB_CFLAGS=-I/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/include}
-pkg_cv_ZLIB_LIBS=${pkg_cv_ZLIB_LIBS='-L/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/lib -lz'}
+pkg_cv_LIBFFI_LIBS=${pkg_cv_LIBFFI_LIBS=-lffi}
+pkg_cv_ZLIB_CFLAGS=${pkg_cv_ZLIB_CFLAGS=-I/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/include}
+pkg_cv_ZLIB_LIBS=${pkg_cv_ZLIB_LIBS=-lz}
 rpppoe_cv_pack_bitfields=${rpppoe_cv_pack_bitfields=rev}
 rsync_cv_HAVE_BROKEN_LARGEFILE=${rsync_cv_HAVE_BROKEN_LARGEFILE=no}
 rsync_cv_HAVE_BROKEN_READDIR=${rsync_cv_HAVE_BROKEN_READDIR=no}

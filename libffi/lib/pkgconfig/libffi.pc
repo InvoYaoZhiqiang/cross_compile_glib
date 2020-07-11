@@ -1,4 +1,4 @@
-prefix=/home/wanji/cross-dbus/libffi
+prefix=/home/wanji/cross-dbus/libffi-3.3/../libffi
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 toolexeclibdir=${libdir}

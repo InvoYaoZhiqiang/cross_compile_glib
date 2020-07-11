@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.gtk.GDBus.Examples.ObjectManager
-Exec=/home/wanji/cross-dbus/glib-2.46.2/gio/tests/gdbus-example-objectmanager-server

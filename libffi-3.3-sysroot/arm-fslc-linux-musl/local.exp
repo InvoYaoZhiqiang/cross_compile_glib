@@ -1,2 +1,0 @@
-set CC_FOR_TARGET "aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux"
-set CXX_FOR_TARGET "aarch64-fslc-linux-g++  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux"
