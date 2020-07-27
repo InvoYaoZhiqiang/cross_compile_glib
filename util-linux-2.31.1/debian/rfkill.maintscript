@@ -1,0 +1,2 @@
+rm_conffile /etc/init/rfkill-restore.conf	2.31.1-0.1~
+rm_conffile /etc/init/rfkill-store.conf		2.31.1-0.1~

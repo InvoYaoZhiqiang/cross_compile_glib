@@ -1,0 +1,30 @@
+Origin: upstream, https://github.com/karelzak/util-linux/commit/189edf1fe501ea39b35911337eab1740888fae7a
+Bug: https://github.com/karelzak/util-linux/issues/966
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1865504
+Bug-Debian: https://bugs.debian.org/953065
+Author: Karel Zak <kzak@redhat.com>
+Date:   Thu Feb 27 14:04:55 2020 +0100
+Description: hwclock reports incorrect status in audit message
+
+    hwclock: fix audit exit status
+    
+    According to audit_log_user_message(3) result 1 is "success" and 0 is
+    "failed", we use standard EXIT_{SUCCESS,FAILURE} macros with reverse
+    status.
+    
+    Addresses: https://github.com/karelzak/util-linux/issues/966
+    Signed-off-by: Karel Zak <kzak@redhat.com>
+
+Index: util-linux-2.31.1/sys-utils/hwclock.c
+===================================================================
+--- util-linux-2.31.1.orig/sys-utils/hwclock.c
++++ util-linux-2.31.1/sys-utils/hwclock.c
+@@ -1367,7 +1367,7 @@ hwclock_exit(const struct hwclock_contro
+ 	if (ctl->hwaudit_on && !ctl->testing) {
+ 		audit_log_user_message(hwaudit_fd, AUDIT_USYS_CONFIG,
+ 				       "op=change-system-time", NULL, NULL, NULL,
+-				       status);
++				       status == EXIT_SUCCESS ? 1  : 0);
+ 	}
+ 	close(hwaudit_fd);
+ #endif

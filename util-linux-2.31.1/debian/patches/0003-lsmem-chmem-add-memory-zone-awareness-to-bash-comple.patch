@@ -1,0 +1,37 @@
+From 891a976e6aeaa4db4a3bf3807b020750cc1e323a Mon Sep 17 00:00:00 2001
+From: Andre Wild <wild@linux.vnet.ibm.com>
+Date: Wed, 27 Sep 2017 19:44:46 +0200
+Subject: [PATCH 3/3] lsmem/chmem: add memory zone awareness to bash-completion
+
+This patch extends the valid --output values with ZONES for the
+lsmem bash-completion, and adds the --zone option for the chmem
+bash-completion.
+
+Signed-off-by: Andre Wild <wild@linux.vnet.ibm.com>
+Signed-off-by: Gerald Schaefer <gerald.schaefer@de.ibm.com>
+---
+ bash-completion/chmem | 1 +
+ bash-completion/lsmem | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+--- a/bash-completion/chmem
++++ b/bash-completion/chmem
+@@ -16,6 +16,7 @@
+ 				--disable
+ 				--blocks
+ 				--verbose
++				--zone
+ 				--help
+ 				--version
+ 			"
+--- a/bash-completion/lsmem
++++ b/bash-completion/lsmem
+@@ -9,7 +9,7 @@
+ 			local prefix realcur OUTPUT_ALL OUTPUT
+ 			realcur="${cur##*,}"
+ 			prefix="${cur%$realcur}"
+-			OUTPUT_ALL='RANGE SIZE STATE REMOVABLE BLOCK NODE'
++			OUTPUT_ALL='RANGE SIZE STATE REMOVABLE BLOCK NODE ZONES'
+ 			for WORD in $OUTPUT_ALL; do
+ 				if ! [[ $prefix == *"$WORD"* ]]; then
+ 					OUTPUT="$WORD ${OUTPUT:-""}"

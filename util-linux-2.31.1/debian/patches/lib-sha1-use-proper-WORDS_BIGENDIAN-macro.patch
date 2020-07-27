@@ -1,0 +1,36 @@
+From: Karel Zak <kzak@redhat.com>
+Date: Tue, 2 Jan 2018 11:08:03 +0100
+Subject: lib/sha1: use proper WORDS_BIGENDIAN macro
+
+The original code uses BYTE_ORDER, but we use WORDS_BIGENDIAN in
+utl-linux.
+
+Reported-by: Andreas Schwab <schwab@linux-m68k.org>
+Signed-off-by: Karel Zak <kzak@redhat.com>
+(cherry picked from commit 4ff4b1106e8c6a71cce59ca40a2019342a92d47d)
+---
+ lib/sha1.c | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+
+diff --git a/lib/sha1.c b/lib/sha1.c
+index e87677c..22d33b3 100644
+--- a/lib/sha1.c
++++ b/lib/sha1.c
+@@ -19,14 +19,11 @@
+ #define rol(value, bits) (((value) << (bits)) | ((value) >> (32 - (bits))))
+ 
+ /* blk0() and blk() perform the initial expand. */
+-/* I got the idea of expanding during the round function from SSLeay */
+-#if BYTE_ORDER == LITTLE_ENDIAN
+-# define blk0(i) (block->l[i] = (rol(block->l[i],24)&0xFF00FF00) \
+-    |(rol(block->l[i],8)&0x00FF00FF))
+-#elif BYTE_ORDER == BIG_ENDIAN
++#ifdef WORDS_BIGENDIAN
+ # define blk0(i) block->l[i]
+ #else
+-# error "Endianness not defined!"
++# define blk0(i) (block->l[i] = (rol(block->l[i],24)&0xFF00FF00) \
++    |(rol(block->l[i],8)&0x00FF00FF))
+ #endif
+ 
+ #define blk(i) (block->l[i&15] = rol(block->l[(i+13)&15]^block->l[(i+8)&15] \

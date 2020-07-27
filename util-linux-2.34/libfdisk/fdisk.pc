@@ -1,0 +1,11 @@
+prefix=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils
+exec_prefix=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils
+libdir=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils/lib
+includedir=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils/include
+
+Name: fdisk
+Description: fdisk library
+Version: 2.34.0
+Requires.private: uuid blkid
+Cflags: -I${includedir}/libfdisk
+Libs: -L${libdir} -lfdisk

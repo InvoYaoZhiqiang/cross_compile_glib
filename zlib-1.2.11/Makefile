@@ -16,7 +16,7 @@
 # To install in $HOME instead of /usr/local, use:
 #    make install prefix=$HOME
 
-CC=aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
+CC=arm-fslc-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
 
 CFLAGS= -O2 -pipe -g -feliminate-unused-debug-types  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
 #CFLAGS=-O -DMAX_WBITS=14 -DMAX_MEM_LEVEL=7
@@ -27,8 +27,8 @@ CFLAGS= -O2 -pipe -g -feliminate-unused-debug-types  -D_LARGEFILE64_SOURCE=1 -DH
 SFLAGS= -O2 -pipe -g -feliminate-unused-debug-types  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
 LDFLAGS=-Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed
 TEST_LDFLAGS=-L. libz.a
-LDSHARED=aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux -shared -Wl,-soname,libz.so.1,--version-script,zlib.map
-CPP=aarch64-fslc-linux-gcc -E  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
+LDSHARED=arm-fslc-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi -shared -Wl,-soname,libz.so.1,--version-script,zlib.map
+CPP=arm-fslc-linux-gnueabi-gcc -E  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
 
 STATICLIB=libz.a
 SHAREDLIB=libz.so
@@ -36,9 +36,9 @@ SHAREDLIBV=libz.so.1.2.11
 SHAREDLIBM=libz.so.1
 LIBS=$(STATICLIB) $(SHAREDLIBV)
 
-AR=aarch64-fslc-linux-ar
+AR=arm-fslc-linux-gnueabi-ar
 ARFLAGS=rc
-RANLIB=aarch64-fslc-linux-ranlib
+RANLIB=arm-fslc-linux-gnueabi-ranlib
 LDCONFIG=ldconfig
 LDSHAREDLIBC=-lc
 TAR=tar

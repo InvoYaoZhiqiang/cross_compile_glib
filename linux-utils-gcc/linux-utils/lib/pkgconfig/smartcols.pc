@@ -1,0 +1,10 @@
+prefix=/home/wanji/cross-dbus/util-linux-2.31.1/../linux-utils
+exec_prefix=/home/wanji/cross-dbus/util-linux-2.31.1/../linux-utils
+libdir=/home/wanji/cross-dbus/util-linux-2.31.1/../linux-utils/lib
+includedir=/home/wanji/cross-dbus/util-linux-2.31.1/../linux-utils/include
+
+Name: smartcols
+Description: table or tree library
+Version: 2.31.1
+Cflags: -I${includedir}/libsmartcols
+Libs: -L${libdir} -lsmartcols

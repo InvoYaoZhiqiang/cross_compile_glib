@@ -425,24 +425,24 @@ pkgdatadir = $(datadir)/libtool
 ACLOCAL = ${SHELL} /home/wanji/cross-dbus/libtool-2.4.6/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = aarch64-fslc-linux-ar
+AR = arm-fslc-linux-gnueabi-ar
 ARFLAGS = cru
-AS = aarch64-fslc-linux-as 
+AS = arm-fslc-linux-gnueabi-as 
 AUTOCONF = ${SHELL} /home/wanji/cross-dbus/libtool-2.4.6/build-aux/missing autoconf
 AUTOHEADER = ${SHELL} /home/wanji/cross-dbus/libtool-2.4.6/build-aux/missing autoheader
 AUTOM4TE = autom4te
 AUTOMAKE = ${SHELL} /home/wanji/cross-dbus/libtool-2.4.6/build-aux/missing automake-1.15
 AUTOTEST = $(AUTOM4TE) --language=autotest
-AWK = mawk
-CC = aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
+AWK = gawk
+CC = arm-fslc-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
 CCDEPMODE = depmode=gcc3
 CFLAGS =  -O2 -pipe -g -feliminate-unused-debug-types 
 CONFIG_INCLUDE = config.h
 CONFIG_STATUS_DEPENDENCIES = $(srcdir)/.version
-CPP = aarch64-fslc-linux-gcc -E  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
+CPP = arm-fslc-linux-gnueabi-gcc -E  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
 CPPFLAGS = 
-CXX = aarch64-fslc-linux-g++  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
-CXXCPP = aarch64-fslc-linux-g++  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux -E
+CXX = arm-fslc-linux-gnueabi-g++  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
+CXXCPP = arm-fslc-linux-gnueabi-g++  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS =  -O2 -pipe -g -feliminate-unused-debug-types 
 CYGPATH_W = echo
@@ -476,7 +476,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = aarch64-fslc-linux-ld  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
+LD = arm-fslc-linux-gnueabi-ld  --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
 LDFLAGS = -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed
 LIBADD_DL = -ldl 
 LIBADD_DLD_LINK = 
@@ -500,9 +500,9 @@ M4_GNU = --gnu
 MAKEINFO = ${SHELL} /home/wanji/cross-dbus/libtool-2.4.6/build-aux/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
-NM = aarch64-fslc-linux-nm
+NM = arm-fslc-linux-gnueabi-nm
 NMEDIT = 
-OBJDUMP = aarch64-fslc-linux-objdump
+OBJDUMP = arm-fslc-linux-gnueabi-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -514,12 +514,12 @@ PACKAGE_TARNAME = libtool
 PACKAGE_URL = http://www.gnu.org/software/libtool/
 PACKAGE_VERSION = 2.4.6
 PATH_SEPARATOR = :
-RANLIB = aarch64-fslc-linux-ranlib
+RANLIB = arm-fslc-linux-gnueabi-ranlib
 RC = 
 SED = sed
 SET_MAKE = 
 SHELL = /bin/bash
-STRIP = aarch64-fslc-linux-strip
+STRIP = arm-fslc-linux-gnueabi-strip
 VERSION = 2.4.6
 abs_builddir = /home/wanji/cross-dbus/libtool-2.4.6
 abs_srcdir = /home/wanji/cross-dbus/libtool-2.4.6

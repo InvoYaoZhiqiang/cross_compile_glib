@@ -120,7 +120,7 @@
 /* #undef LTDL_DLOPEN_DEPLIBS */
 
 /* Define to the system default library search path. */
-#define LT_DLSEARCH_PATH "/lib:/usr/lib:/usr/lib/x86_64-linux-gnu/libfakeroot:/usr/local/lib:/usr/lib/vmware-tools/lib32/libvmGuestLib.so:/usr/lib/vmware-tools/lib64/libvmGuestLib.so:/usr/lib/vmware-tools/lib32/libvmGuestLibJava.so:/usr/lib/vmware-tools/lib64/libvmGuestLibJava.so:/usr/lib/vmware-tools/lib32/libDeployPkg.so:/usr/lib/vmware-tools/lib64/libDeployPkg.so:/usr/local/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu"
+#define LT_DLSEARCH_PATH "/lib:/usr/lib:/usr/lib/x86_64-linux-gnu/libfakeroot:/usr/local/lib:/usr/lib/vmware-tools/lib32/libvmGuestLib.so:/usr/lib/vmware-tools/lib64/libvmGuestLib.so:/usr/lib/vmware-tools/lib32/libvmGuestLibJava.so:/usr/lib/vmware-tools/lib64/libvmGuestLibJava.so:/usr/lib/vmware-tools/lib32/libDeployPkg.so:/usr/lib/vmware-tools/lib64/libDeployPkg.so:/usr/local/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/lib32:/usr/lib32:/libx32:/usr/libx32:/lib:/usr/lib:/usr/local/ultrasec/lib"
 
 /* The archive extension */
 #define LT_LIBEXT "a"
