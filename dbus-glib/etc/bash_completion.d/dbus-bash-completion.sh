@@ -13,7 +13,7 @@ __dbus_send() {
         cur=${cur/*=/}
     fi
 
-    COMPREPLY=($(compgen -W "$(/home/wanijv2x/workspace/cross/v4/dbus-glib/libexec/dbus-bash-completion-helper dbus-send ${COMP_WORDS[@]:0})" -- $cur))
+    COMPREPLY=($(compgen -W "$(/home/wanji/cross-dbus/dbus-glib-0.110/../dbus-glib/libexec/dbus-bash-completion-helper dbus-send ${COMP_WORDS[@]:0})" -- $cur))
 }
 
 ################################################################################

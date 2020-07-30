@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.freedesktop.DBus.TestSuiteSegfaultService
+Exec=/home/wanji/cross-dbus/dbus-1.13.18/test/test-segfault
+

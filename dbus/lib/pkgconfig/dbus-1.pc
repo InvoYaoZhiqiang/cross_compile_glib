@@ -1,10 +1,10 @@
-original_prefix=/home/wanijv2x/workspace/cross/dbus
+original_prefix=/home/wanji/cross-dbus/dbus-1.12.4/../dbus
 prefix=${original_prefix}
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
-system_bus_default_address=unix:path=/home/wanijv2x/workspace/cross/dbus/var/run/dbus/system_bus_socket
+system_bus_default_address=unix:path=/home/wanji/cross-dbus/dbus-1.12.4/../dbus/var/run/dbus/system_bus_socket
 datarootdir=${prefix}/share
 datadir=${datarootdir}
 sysconfdir=${prefix}/etc
