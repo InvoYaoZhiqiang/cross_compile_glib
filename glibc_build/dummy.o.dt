@@ -1,0 +1,15 @@
+/home/wanji/cross-dbus/glibc_build/dummy.o: \
+ /home/wanji/cross-dbus/glibc_build/dummy.c ../include/stdc-predef.h \
+ /home/wanji/cross-dbus/glibc_build/libc-modules.h \
+ ../include/libc-symbols.h /home/wanji/cross-dbus/glibc_build/config.h \
+ ../sysdeps/generic/symbol-hacks.h
+
+../include/stdc-predef.h:
+
+/home/wanji/cross-dbus/glibc_build/libc-modules.h:
+
+../include/libc-symbols.h:
+
+/home/wanji/cross-dbus/glibc_build/config.h:
+
+../sysdeps/generic/symbol-hacks.h:
