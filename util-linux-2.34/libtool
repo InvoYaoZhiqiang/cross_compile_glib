@@ -66,9 +66,9 @@ ECHO="printf %s\\n"
 PATH_SEPARATOR=":"
 
 # The host system.
-host_alias=arm-fslc-linux-gnueabi
-host=arm-fslc-linux-gnueabi
-host_os=linux-gnueabi
+host_alias=aarch64-fslc-linux
+host=aarch64-fslc-linux-gnu
+host_os=linux-gnu
 
 # The build system.
 build_alias=
@@ -91,7 +91,7 @@ EGREP="/bin/grep -E"
 FGREP="/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="arm-fslc-linux-gnueabi-nm"
+NM="aarch64-fslc-linux-nm"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -121,7 +121,7 @@ to_host_file_cmd=func_convert_file_noop
 to_tool_file_cmd=func_convert_file_noop
 
 # An object symbol dumper.
-OBJDUMP="arm-fslc-linux-gnueabi-objdump"
+OBJDUMP="aarch64-fslc-linux-objdump"
 
 # Method to check whether dependent libraries are shared objects.
 deplibs_check_method="pass_all"
@@ -142,7 +142,7 @@ DLLTOOL="false"
 sharedlib_from_linklib_cmd="printf %s\\n"
 
 # The archiver.
-AR="arm-fslc-linux-gnueabi-ar"
+AR="aarch64-fslc-linux-ar"
 
 # Flags to create an archive.
 AR_FLAGS="cru"
@@ -151,10 +151,10 @@ AR_FLAGS="cru"
 archiver_list_spec="@"
 
 # A symbol stripping program.
-STRIP="arm-fslc-linux-gnueabi-strip"
+STRIP="aarch64-fslc-linux-strip"
 
 # Commands used to install an old-style archive.
-RANLIB="arm-fslc-linux-gnueabi-ranlib"
+RANLIB="aarch64-fslc-linux-ranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$tool_oldlib"
 old_postuninstall_cmds=""
 
@@ -162,7 +162,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="arm-fslc-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi"
+LTCC="aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux"
 
 # LTCC compiler flags.
 LTCFLAGS=" -O2 -pipe -g -feliminate-unused-debug-types "
@@ -282,10 +282,10 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/opt/fslc-framebuffer/2.4.4/sysroots/x86_64-fslcsdk-linux/usr/lib/arm-fslc-linux-gnueabi/gcc/arm-fslc-linux-gnueabi/7.3.0 /opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi/lib /opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi/usr/lib/arm-fslc-linux-gnueabi/7.3.0 /opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi/usr/lib "
+sys_lib_search_path_spec="/opt/fslc-wayland/2.5.2/sysroots/x86_64-fslcsdk-linux/usr/lib/aarch64-fslc-linux/gcc/aarch64-fslc-linux/7.3.0 /opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/lib /opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/lib/aarch64-fslc-linux/7.3.0 /opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/lib "
 
 # Detected run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib /usr/lib/vmware-tools/lib32/libvmGuestLib.so /usr/lib/vmware-tools/lib64/libvmGuestLib.so /usr/lib/vmware-tools/lib32/libvmGuestLibJava.so /usr/lib/vmware-tools/lib64/libvmGuestLibJava.so /usr/lib/vmware-tools/lib32/libDeployPkg.so /usr/lib/vmware-tools/lib64/libDeployPkg.so /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 /libx32 /usr/libx32 /lib /usr/lib /usr/local/ultrasec/lib "
+sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib/i386-linux-gnu /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /usr/local/lib/i686-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/lib/vmware-tools/lib32/libvmGuestLib.so /usr/lib/vmware-tools/lib64/libvmGuestLib.so /usr/lib/vmware-tools/lib32/libvmGuestLibJava.so /usr/lib/vmware-tools/lib64/libvmGuestLibJava.so /usr/lib/vmware-tools/lib32/libDeployPkg.so /usr/lib/vmware-tools/lib64/libDeployPkg.so /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 /libx32 /usr/libx32 /lib /usr/lib /usr/local/ultrasec/lib "
 
 # Explicit LT_SYS_LIBRARY_PATH set during ./configure time.
 configure_time_lt_sys_library_path=""
@@ -300,12 +300,12 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Commands to strip libraries.
-old_striplib="arm-fslc-linux-gnueabi-strip --strip-debug"
-striplib="arm-fslc-linux-gnueabi-strip --strip-unneeded"
+old_striplib="aarch64-fslc-linux-strip --strip-debug"
+striplib="aarch64-fslc-linux-strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="arm-fslc-linux-gnueabi-ld  --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi"
+LD="aarch64-fslc-linux-ld  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -315,7 +315,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="arm-fslc-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi"
+CC="aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -330,7 +330,7 @@ pic_flag=" -fPIC -DPIC"
 wl="-Wl,"
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Does compiler simultaneously support -c and -o options?
 compiler_c_o="yes"

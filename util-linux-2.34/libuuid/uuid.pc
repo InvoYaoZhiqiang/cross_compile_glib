@@ -1,7 +1,7 @@
-prefix=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils
-exec_prefix=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils
-libdir=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils/lib
-includedir=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils/include
+prefix=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64
+exec_prefix=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64
+libdir=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64/lib
+includedir=/home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64/include
 
 Name: uuid
 Description: Universally unique id library

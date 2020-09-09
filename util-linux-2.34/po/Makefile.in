@@ -23,7 +23,7 @@ srcdir = .
 top_srcdir = ..
 
 
-prefix = /home/wanji/cross-dbus/util-linux-2.34/../linux-utils
+prefix = /home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64
 exec_prefix = ${prefix}
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}

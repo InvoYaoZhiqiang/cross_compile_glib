@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/wanji/cross-dbus/util-linux-2.34/../linux-utils/lib'
+libdir='/home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64/lib'

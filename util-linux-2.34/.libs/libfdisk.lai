@@ -17,7 +17,7 @@ old_library='libfdisk.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' /home/wanji/cross-dbus/util-linux-2.34/../linux-utils/lib/libuuid.la /home/wanji/cross-dbus/util-linux-2.34/../linux-utils/lib/libblkid.la'
+dependency_libs=' /home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64/lib/libuuid.la /home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64/lib/libblkid.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/wanji/cross-dbus/util-linux-2.34/../linux-utils/lib'
+libdir='/home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64/lib'

@@ -91,7 +91,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = arm-fslc-linux-gnueabi
+host_triplet = aarch64-fslc-linux-gnu
 noinst_PROGRAMS =
 usrbin_exec_PROGRAMS = $(am__EXEEXT_69) $(am__EXEEXT_70) \
 	$(am__EXEEXT_71) $(am__EXEEXT_72) $(am__EXEEXT_73) \
@@ -161,8 +161,8 @@ am__append_4 = lib/cpuset.c
 am__append_5 = lib/path.c \
 	lib/procutils.c lib/sysfs.c
 # tinfo or ncurses are optional
-am__append_6 = $(TINFO_LIBS)
-am__append_7 = $(TINFO_CFLAGS)
+#am__append_6 = $(TINFO_LIBS)
+#am__append_7 = $(TINFO_CFLAGS)
 #am__append_8 = $(NCURSES_LIBS)
 #am__append_9 = $(NCURSES_CFLAGS)
 am__append_10 = test_cpuset
@@ -344,19 +344,19 @@ am__append_92 = text-utils/rev.1
 #am__append_94 = text-utils/line.1
 #am__append_95 = pg
 #am__append_96 = text-utils/pg.1
-am__append_97 = ul
-am__append_98 = text-utils/ul.1
-am__append_99 = $(TINFO_LIBS) \
-	$(TINFO_CFLAGS)
+#am__append_97 = ul
+#am__append_98 = text-utils/ul.1
+##am__append_99 = $(TINFO_LIBS) \
+##	$(TINFO_CFLAGS)
 #am__append_100 = $(NCURSES_CFLAGS)
 #am__append_101 = $(NCURSES_LIBS)
-am__append_102 = more
-am__append_103 = text-utils/more.1
-am__append_104 = $(TINFO_LIBS) \
-	$(TINFO_CFLAGS)
+#am__append_102 = more
+#am__append_103 = text-utils/more.1
+##am__append_104 = $(TINFO_LIBS) \
+##	$(TINFO_CFLAGS)
 #am__append_105 = $(NCURSES_CFLAGS)
 #am__append_106 = $(NCURSES_LIBS)
-am__append_107 = test_more
+#am__append_107 = test_more
 am__append_108 = script
 am__append_109 = term-utils/script.1
 am__append_110 = -lutil
@@ -367,10 +367,10 @@ am__append_114 = term-utils/scriptreplay.1
 am__append_115 = agetty
 am__append_116 = term-utils/agetty.8
 #am__append_117 = -lutil
-am__append_118 = setterm
-am__append_119 = term-utils/setterm.1
-am__append_120 = $(TINFO_LIBS)
-am__append_121 = $(TINFO_CFLAGS)
+#am__append_118 = setterm
+#am__append_119 = term-utils/setterm.1
+##am__append_120 = $(TINFO_LIBS)
+##am__append_121 = $(TINFO_CFLAGS)
 #am__append_122 = $(NCURSES_LIBS)
 #am__append_123 = $(NCURSES_CFLAGS)
 am__append_124 = mesg
@@ -576,8 +576,8 @@ am__append_281 = $(REALTIME_LIBS)
 am__append_285 = cal
 am__append_286 = misc-utils/cal.1
 # tinfo or ncurses are optional
-am__append_287 = $(TINFO_LIBS)
-am__append_288 = $(TINFO_CFLAGS)
+#am__append_287 = $(TINFO_LIBS)
+#am__append_288 = $(TINFO_CFLAGS)
 #am__append_289 = $(NCURSES_LIBS)
 #am__append_290 = $(NCURSES_CFLAGS)
 am__append_291 = test_cal
@@ -659,9 +659,9 @@ am__append_362 = fsck
 am__append_363 = disk-utils/fsck.8
 am__append_364 = raw
 am__append_365 = disk-utils/raw.8
-#am__append_366 = fsck.cramfs mkfs.cramfs
-#am__append_367 = disk-utils/fsck.cramfs.8 \
-#	disk-utils/mkfs.cramfs.8
+am__append_366 = fsck.cramfs mkfs.cramfs
+am__append_367 = disk-utils/fsck.cramfs.8 \
+	disk-utils/mkfs.cramfs.8
 am__append_368 = fdformat
 am__append_369 = disk-utils/fdformat.8
 am__append_370 = blockdev
@@ -672,13 +672,13 @@ am__append_373 = disk-utils/fdisk.8
 am__append_375 = sfdisk
 am__append_376 = disk-utils/sfdisk.8
 #am__append_377 = sfdisk.static
-am__append_378 = cfdisk
-am__append_379 = disk-utils/cfdisk.8
-am__append_380 = -I$(ul_libmount_incdir)
-am__append_381 = libmount.la
-#am__append_382 = -lslang
-am__append_383 = $(NCURSES_CFLAGS)
-am__append_384 = $(NCURSES_LIBS)
+#am__append_378 = cfdisk
+#am__append_379 = disk-utils/cfdisk.8
+#am__append_380 = -I$(ul_libmount_incdir)
+#am__append_381 = libmount.la
+##am__append_382 = -lslang
+#am__append_383 = $(NCURSES_CFLAGS)
+#am__append_384 = $(NCURSES_LIBS)
 am__append_385 = partx addpart delpart resizepart
 am__append_386 = \
 	disk-utils/addpart.8 \
@@ -725,9 +725,9 @@ am__append_422 = \
 	bash-completion/fsck.minix \
 	bash-completion/mkfs.minix
 
-#am__append_423 = \
-#	bash-completion/fsck.cramfs \
-#	bash-completion/mkfs.cramfs
+am__append_423 = \
+	bash-completion/fsck.cramfs \
+	bash-completion/mkfs.cramfs
 
 am__append_424 = \
 	bash-completion/addpart \
@@ -741,7 +741,7 @@ am__append_427 = bash-completion/fdformat
 am__append_428 = bash-completion/blockdev
 am__append_429 = bash-completion/fdisk
 am__append_430 = bash-completion/sfdisk
-am__append_431 = bash-completion/cfdisk
+#am__append_431 = bash-completion/cfdisk
 #am__append_432 = \
 #	bash-completion/chfn \
 #	bash-completion/chsh
@@ -794,10 +794,10 @@ am__append_475 = bash-completion/zramctl
 am__append_476 = bash-completion/mesg
 am__append_477 = bash-completion/wall
 #am__append_478 = bash-completion/write
-am__append_479 = bash-completion/setterm
-am__append_480 = bash-completion/more
+#am__append_479 = bash-completion/setterm
+#am__append_480 = bash-completion/more
 #am__append_481 = bash-completion/pg
-am__append_482 = bash-completion/ul
+#am__append_482 = bash-completion/ul
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_vscript.m4 \
@@ -827,7 +827,7 @@ CONFIG_HEADER = config.h
 CONFIG_CLEAN_FILES = libblkid/src/blkid.h libfdisk/src/libfdisk.h \
 	libmount/src/libmount.h libsmartcols/src/libsmartcols.h
 CONFIG_CLEAN_VPATH_FILES =
-am__EXEEXT_1 = more$(EXEEXT)
+#am__EXEEXT_1 = more$(EXEEXT)
 #am__EXEEXT_2 = login$(EXEEXT)
 #am__EXEEXT_3 = su$(EXEEXT)
 am__EXEEXT_4 = dmesg$(EXEEXT)
@@ -900,7 +900,7 @@ am__EXEEXT_25 = test_fdisk_ask$(EXEEXT) \
 	test_fdisk_item$(EXEEXT)
 am__EXEEXT_26 = sample-fdisk-mkpart$(EXEEXT) \
 	sample-fdisk-mkpart-fullspec$(EXEEXT)
-am__EXEEXT_27 = test_more$(EXEEXT)
+#am__EXEEXT_27 = test_more$(EXEEXT)
 am__EXEEXT_28 = test_script$(EXEEXT)
 am__EXEEXT_29 = test_consoles$(EXEEXT)
 am__EXEEXT_30 = test_dmesg$(EXEEXT)
@@ -936,14 +936,14 @@ am__EXEEXT_58 = mkswap$(EXEEXT)
 am__EXEEXT_59 = swaplabel$(EXEEXT)
 am__EXEEXT_60 = fsck$(EXEEXT)
 am__EXEEXT_61 = raw$(EXEEXT)
-#am__EXEEXT_62 = fsck.cramfs$(EXEEXT) \
-#	mkfs.cramfs$(EXEEXT)
+am__EXEEXT_62 = fsck.cramfs$(EXEEXT) \
+	mkfs.cramfs$(EXEEXT)
 am__EXEEXT_63 = blockdev$(EXEEXT)
 am__EXEEXT_64 = fdisk$(EXEEXT)
 #am__EXEEXT_65 = fdisk.static$(EXEEXT)
 am__EXEEXT_66 = sfdisk$(EXEEXT)
 #am__EXEEXT_67 = sfdisk.static$(EXEEXT)
-am__EXEEXT_68 = cfdisk$(EXEEXT)
+#am__EXEEXT_68 = cfdisk$(EXEEXT)
 am__EXEEXT_69 = chrt$(EXEEXT)
 am__EXEEXT_70 = ionice$(EXEEXT)
 am__EXEEXT_71 = taskset$(EXEEXT)
@@ -955,10 +955,10 @@ am__EXEEXT_76 = hexdump$(EXEEXT)
 am__EXEEXT_77 = rev$(EXEEXT)
 #am__EXEEXT_78 = line$(EXEEXT)
 #am__EXEEXT_79 = pg$(EXEEXT)
-am__EXEEXT_80 = ul$(EXEEXT)
+#am__EXEEXT_80 = ul$(EXEEXT)
 am__EXEEXT_81 = script$(EXEEXT)
 am__EXEEXT_82 = scriptreplay$(EXEEXT)
-am__EXEEXT_83 = setterm$(EXEEXT)
+#am__EXEEXT_83 = setterm$(EXEEXT)
 am__EXEEXT_84 = mesg$(EXEEXT)
 am__EXEEXT_85 = wall$(EXEEXT)
 #am__EXEEXT_86 = write$(EXEEXT)
@@ -1378,7 +1378,7 @@ libsmartcols_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(LDFLAGS) -o $@
 am_libsmartcols_la_rpath = -rpath \
 	$(usrlib_execdir)
-am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1)
+#am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_4 =  \
 #	$(am__DEPENDENCIES_1)
 libtcolors_la_DEPENDENCIES = $(am__DEPENDENCIES_3) \
@@ -1485,8 +1485,8 @@ blockdev_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 am__cal_SOURCES_DIST = misc-utils/cal.c
 am_cal_OBJECTS = misc-utils/cal-cal.$(OBJEXT)
 cal_OBJECTS = $(am_cal_OBJECTS)
-am__DEPENDENCIES_5 =  \
-	$(am__DEPENDENCIES_1)
+#am__DEPENDENCIES_5 =  \
+#	$(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_6 = $(am__DEPENDENCIES_1)
 cal_DEPENDENCIES = $(am__DEPENDENCIES_2) libcommon.la \
 	libtcolors.la $(am__DEPENDENCIES_5) \
@@ -1495,15 +1495,15 @@ cal_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(cal_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
 am__cfdisk_SOURCES_DIST = disk-utils/cfdisk.c
-am_cfdisk_OBJECTS =  \
-	disk-utils/cfdisk-cfdisk.$(OBJEXT)
+#am_cfdisk_OBJECTS =  \
+#	disk-utils/cfdisk-cfdisk.$(OBJEXT)
 cfdisk_OBJECTS = $(am_cfdisk_OBJECTS)
-am__DEPENDENCIES_7 =  \
-	$(am__DEPENDENCIES_1)
-cfdisk_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-	libsmartcols.la libcommon.la libfdisk.la \
-	libtcolors.la $(am__append_381) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_7)
+#am__DEPENDENCIES_7 =  \
+#	$(am__DEPENDENCIES_1)
+#cfdisk_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+#	libsmartcols.la libcommon.la libfdisk.la \
+#	libtcolors.la $(am__append_381) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_7)
 cfdisk_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(cfdisk_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -1727,14 +1727,14 @@ fsck_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
 am__fsck_cramfs_SOURCES_DIST = disk-utils/fsck.cramfs.c \
 	disk-utils/cramfs.h disk-utils/cramfs_common.c
-#am__objects_22 =  \
-#	disk-utils/cramfs_common.$(OBJEXT)
-#am_fsck_cramfs_OBJECTS =  \
-#	disk-utils/fsck.cramfs.$(OBJEXT) \
-#	$(am__objects_22)
+am__objects_22 =  \
+	disk-utils/cramfs_common.$(OBJEXT)
+am_fsck_cramfs_OBJECTS =  \
+	disk-utils/fsck.cramfs.$(OBJEXT) \
+	$(am__objects_22)
 fsck_cramfs_OBJECTS = $(am_fsck_cramfs_OBJECTS)
-#fsck_cramfs_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-#	libcommon.la
+fsck_cramfs_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+	libcommon.la
 am__fsck_minix_SOURCES_DIST = disk-utils/fsck.minix.c \
 	disk-utils/minix_programs.h
 am_fsck_minix_OBJECTS =  \
@@ -1996,12 +1996,12 @@ mkfs_bfs_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 	libcommon.la
 am__mkfs_cramfs_SOURCES_DIST = disk-utils/mkfs.cramfs.c \
 	disk-utils/cramfs.h disk-utils/cramfs_common.c
-#am_mkfs_cramfs_OBJECTS =  \
-#	disk-utils/mkfs.cramfs.$(OBJEXT) \
-#	$(am__objects_22)
+am_mkfs_cramfs_OBJECTS =  \
+	disk-utils/mkfs.cramfs.$(OBJEXT) \
+	$(am__objects_22)
 mkfs_cramfs_OBJECTS = $(am_mkfs_cramfs_OBJECTS)
-#mkfs_cramfs_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-#	libcommon.la
+mkfs_cramfs_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+	libcommon.la
 am__mkfs_minix_SOURCES_DIST = disk-utils/minix_programs.h \
 	disk-utils/mkfs.minix.c
 am_mkfs_minix_OBJECTS =  \
@@ -2020,15 +2020,15 @@ mkswap_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(mkswap_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
 am__more_SOURCES_DIST = text-utils/more.c
-am_more_OBJECTS = text-utils/more-more.$(OBJEXT)
+#am_more_OBJECTS = text-utils/more-more.$(OBJEXT)
 more_OBJECTS = $(am_more_OBJECTS)
-am__DEPENDENCIES_15 =  \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+##am__DEPENDENCIES_15 =  \
+##	$(am__DEPENDENCIES_1) \
+##	$(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_16 =  \
 #	$(am__DEPENDENCIES_1)
-more_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_15) $(am__DEPENDENCIES_16)
+#more_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+#	$(am__DEPENDENCIES_15) $(am__DEPENDENCIES_16)
 more_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(more_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -2361,16 +2361,16 @@ setsid_OBJECTS = $(am_setsid_OBJECTS)
 setsid_LDADD = $(LDADD)
 setsid_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am__setterm_SOURCES_DIST = term-utils/setterm.c
-am_setterm_OBJECTS =  \
-	term-utils/setterm-setterm.$(OBJEXT)
+#am_setterm_OBJECTS =  \
+#	term-utils/setterm-setterm.$(OBJEXT)
 setterm_OBJECTS = $(am_setterm_OBJECTS)
-am__DEPENDENCIES_21 =  \
-	$(am__DEPENDENCIES_1)
+##am__DEPENDENCIES_21 =  \
+##	$(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_22 =  \
 #	$(am__DEPENDENCIES_1)
-setterm_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-	libcommon.la $(am__DEPENDENCIES_21) \
-	$(am__DEPENDENCIES_22)
+#setterm_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+#	libcommon.la $(am__DEPENDENCIES_21) \
+#	$(am__DEPENDENCIES_22)
 setterm_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(setterm_CFLAGS) \
 	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -2754,12 +2754,12 @@ test_mkfs_minix_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(test_mkfs_minix_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
 	-o $@
 am__test_more_SOURCES_DIST = text-utils/more.c
-am__objects_32 = text-utils/test_more-more.$(OBJEXT)
-am_test_more_OBJECTS = $(am__objects_32)
+#am__objects_32 = text-utils/test_more-more.$(OBJEXT)
+#am_test_more_OBJECTS = $(am__objects_32)
 test_more_OBJECTS = $(am_test_more_OBJECTS)
-am__DEPENDENCIES_29 = $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_15) $(am__DEPENDENCIES_16)
-test_more_DEPENDENCIES = $(am__DEPENDENCIES_29)
+#am__DEPENDENCIES_29 = $(am__DEPENDENCIES_2) \
+#	$(am__DEPENDENCIES_15) $(am__DEPENDENCIES_16)
+#test_more_DEPENDENCIES = $(am__DEPENDENCIES_29)
 test_more_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(test_more_CFLAGS) \
 	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -2999,15 +2999,15 @@ tunelp_OBJECTS = $(am_tunelp_OBJECTS)
 #tunelp_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 #	libcommon.la
 am__ul_SOURCES_DIST = text-utils/ul.c
-am_ul_OBJECTS = text-utils/ul-ul.$(OBJEXT)
+#am_ul_OBJECTS = text-utils/ul-ul.$(OBJEXT)
 ul_OBJECTS = $(am_ul_OBJECTS)
-am__DEPENDENCIES_33 =  \
-	$(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+##am__DEPENDENCIES_33 =  \
+##	$(am__DEPENDENCIES_1) \
+##	$(am__DEPENDENCIES_1)
 #am__DEPENDENCIES_34 =  \
 #	$(am__DEPENDENCIES_1)
-ul_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_33) $(am__DEPENDENCIES_34)
+#ul_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+#	$(am__DEPENDENCIES_33) $(am__DEPENDENCIES_34)
 ul_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ul_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -4120,17 +4120,17 @@ ACLOCAL = ${SHELL} /home/wanji/cross-dbus/util-linux-2.34/config/missing aclocal
 ADJTIME_PATH = /etc/adjtime
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = arm-fslc-linux-gnueabi-ar
+AR = aarch64-fslc-linux-ar
 ASAN_LDFLAGS = 
 AUTOCONF = ${SHELL} /home/wanji/cross-dbus/util-linux-2.34/config/missing autoconf
 AUTOHEADER = ${SHELL} /home/wanji/cross-dbus/util-linux-2.34/config/missing autoheader
 AUTOMAKE = ${SHELL} /home/wanji/cross-dbus/util-linux-2.34/config/missing automake-1.16
 AWK = gawk
 BSD_WARN_CFLAGS =  -Wno-clobbered
-CC = arm-fslc-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
+CC = aarch64-fslc-linux-gcc  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
 CCDEPMODE = depmode=gcc3
 CFLAGS =  -O2 -pipe -g -feliminate-unused-debug-types 
-CPP = arm-fslc-linux-gnueabi-gcc -E  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
+CPP = aarch64-fslc-linux-gcc -E  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
 CPPFLAGS = 
 CYGPATH_W = echo
 DAEMON_CFLAGS = 
@@ -4159,7 +4159,7 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INTLLIBS = 
 INTL_MACOSX_LIBS = 
-LD = arm-fslc-linux-gnueabi-ld  --sysroot=/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi
+LD = aarch64-fslc-linux-ld  --sysroot=/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux
 LDFLAGS = -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed
 LIBBLKID_DATE = 14-Jun-2019
 LIBBLKID_VERSION = 2.34.0
@@ -4203,14 +4203,14 @@ NCURSES5_CONFIG =
 NCURSES6_CONFIG = 
 NCURSESW5_CONFIG = 
 NCURSESW6_CONFIG = 
-NCURSESW_CFLAGS = -D_GNU_SOURCE -D_DEFAULT_SOURCE
-NCURSESW_LIBS = -lncursesw -ltinfo
-NCURSES_CFLAGS = -D_GNU_SOURCE -D_DEFAULT_SOURCE
-NCURSES_LIBS = -lncursesw -ltinfo
-NM = arm-fslc-linux-gnueabi-nm
+NCURSESW_CFLAGS = 
+NCURSESW_LIBS = 
+NCURSES_CFLAGS = 
+NCURSES_LIBS = 
+NM = aarch64-fslc-linux-nm
 NMEDIT = 
 NO_UNUSED_WARN_CFLAGS =  -Wno-unused-parameter
-OBJDUMP = arm-fslc-linux-gnueabi-objdump
+OBJDUMP = aarch64-fslc-linux-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -4224,9 +4224,9 @@ PACKAGE_VERSION = 2.34
 PATH_SEPARATOR = :
 PCRE_CFLAGS = 
 PCRE_LIBS = 
-PKG_CONFIG = /opt/fslc-framebuffer/2.4.4/sysroots/x86_64-fslcsdk-linux/usr/bin/pkg-config
+PKG_CONFIG = /opt/fslc-wayland/2.5.2/sysroots/x86_64-fslcsdk-linux/usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = /opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi/usr/lib/pkgconfig:/opt/fslc-framebuffer/2.4.4/sysroots/armv7at2hf-neon-fslc-linux-gnueabi/usr/share/pkgconfig
+PKG_CONFIG_PATH = /opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/lib/pkgconfig:/opt/fslc-wayland/2.5.2/sysroots/aarch64-fslc-linux/usr/share/pkgconfig
 POSUB = po
 PYTHON = /usr/bin/python
 PYTHON_CFLAGS = 
@@ -4236,7 +4236,7 @@ PYTHON_PLATFORM = linux2
 PYTHON_PREFIX = ${prefix}
 PYTHON_VERSION = 2.7
 PYTHON_WARN_CFLAGS =  -Wno-cast-function-type
-RANLIB = arm-fslc-linux-gnueabi-ranlib
+RANLIB = aarch64-fslc-linux-ranlib
 READLINE_LIBS = 
 READLINE_LIBS_STATIC = 
 REALTIME_LIBS = -lrt
@@ -4250,7 +4250,7 @@ SHELL = /bin/bash
 SOCKET_LIBS = 
 SOLIB_CFLAGS = 
 SOLIB_LDFLAGS = 
-STRIP = arm-fslc-linux-gnueabi-strip
+STRIP = aarch64-fslc-linux-strip
 SUID_CFLAGS = 
 SUID_LDFLAGS = 
 SYSTEMD_CFLAGS = 
@@ -4261,9 +4261,9 @@ SYSTEMD_JOURNAL_LIBS =
 SYSTEMD_LIBS = 
 TINFOW_CFLAGS = 
 TINFOW_LIBS = 
-TINFO_CFLAGS = -D_GNU_SOURCE -D_DEFAULT_SOURCE
-TINFO_LIBS = -ltinfo
-TINFO_LIBS_STATIC = -ltinfo
+TINFO_CFLAGS = 
+TINFO_LIBS = 
+TINFO_LIBS_STATIC = 
 USE_NLS = yes
 VERSION = 2.34
 VSCRIPT_LDFLAGS = -Wl,--version-script
@@ -4272,7 +4272,7 @@ XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
 XGETTEXT_EXTRA_OPTIONS = 
 XSLTPROC = /usr/bin/xsltproc
-YACC = yacc
+YACC = bison -y
 YFLAGS = 
 abs_builddir = /home/wanji/cross-dbus/util-linux-2.34
 abs_srcdir = /home/wanji/cross-dbus/util-linux-2.34
@@ -4299,10 +4299,10 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = arm-fslc-linux-gnueabi
-host_alias = arm-fslc-linux-gnueabi
-host_cpu = arm
-host_os = linux-gnueabi
+host = aarch64-fslc-linux-gnu
+host_alias = aarch64-fslc-linux
+host_cpu = aarch64
+host_os = linux-gnu
 host_vendor = fslc
 htmldir = ${docdir}
 includedir = ${prefix}/include
@@ -4319,7 +4319,7 @@ pdfdir = ${docdir}
 pkgconfigdir = ${usrlib_execdir}/pkgconfig
 pkgpyexecdir = ${pyexecdir}/util-linux
 pkgpythondir = ${pythondir}/util-linux
-prefix = /home/wanji/cross-dbus/util-linux-2.34/../linux-utils
+prefix = /home/wanji/cross-dbus/util-linux-2.34/../linux-utils-aarch64
 program_transform_name = s,x,x,
 psdir = ${docdir}
 pyexecdir = ${exec_prefix}/lib/python2.7/site-packages
@@ -5043,17 +5043,17 @@ rev_SOURCES = text-utils/rev.c
 #pg_SOURCES = text-utils/pg.c
 #pg_CFLAGS = $(AM_CFLAGS) $(BSD_WARN_CFLAGS) $(NCURSES_CFLAGS) $(TINFO_CFLAGS)
 #pg_LDADD = $(LDADD) libcommon.la $(NCURSES_LIBS) $(TINFO_LIBS)
-ul_SOURCES = text-utils/ul.c
-ul_CFLAGS = $(AM_CFLAGS) $(am__append_100)
-ul_LDADD = $(LDADD) $(am__append_99) $(am__append_101)
-more_SOURCES = text-utils/more.c
-more_CFLAGS = $(AM_CFLAGS) $(BSD_WARN_CFLAGS) \
-	$(am__append_105)
-more_LDADD = $(LDADD) $(am__append_104) \
-	$(am__append_106)
-test_more_SOURCES = $(more_SOURCES)
-test_more_CFLAGS = -DTEST_PROGRAM $(more_CFLAGS)
-test_more_LDADD = $(more_LDADD)
+#ul_SOURCES = text-utils/ul.c
+#ul_CFLAGS = $(AM_CFLAGS) $(am__append_100)
+#ul_LDADD = $(LDADD) $(am__append_99) $(am__append_101)
+#more_SOURCES = text-utils/more.c
+#more_CFLAGS = $(AM_CFLAGS) $(BSD_WARN_CFLAGS) \
+#	$(am__append_105)
+#more_LDADD = $(LDADD) $(am__append_104) \
+#	$(am__append_106)
+#test_more_SOURCES = $(more_SOURCES)
+#test_more_CFLAGS = -DTEST_PROGRAM $(more_CFLAGS)
+#test_more_LDADD = $(more_LDADD)
 script_SOURCES = term-utils/script.c lib/monotonic.c
 script_CFLAGS = $(AM_CFLAGS) -Wno-format-y2k
 script_LDADD = $(LDADD) libcommon.la \
@@ -5067,11 +5067,11 @@ scriptreplay_LDADD = $(LDADD) libcommon.la $(MATH_LIBS)
 agetty_SOURCES = term-utils/agetty.c
 agetty_LDADD = $(LDADD) libcommon.la \
 	$(am__append_117)
-setterm_SOURCES = term-utils/setterm.c
-setterm_CFLAGS = $(AM_CFLAGS) $(am__append_121) \
-	$(am__append_123)
-setterm_LDADD = $(LDADD) libcommon.la \
-	$(am__append_120) $(am__append_122)
+#setterm_SOURCES = term-utils/setterm.c
+#setterm_CFLAGS = $(AM_CFLAGS) $(am__append_121) \
+#	$(am__append_123)
+#setterm_LDADD = $(LDADD) libcommon.la \
+#	$(am__append_120) $(am__append_122)
 mesg_LDADD = $(LDADD) libcommon.la
 mesg_SOURCES = term-utils/mesg.c
 wall_SOURCES = \
@@ -5479,11 +5479,11 @@ fsck_SOURCES = disk-utils/fsck.c lib/monotonic.c
 fsck_LDADD = $(LDADD) libmount.la libblkid.la libcommon.la $(REALTIME_LIBS)
 fsck_CFLAGS = $(AM_CFLAGS) -I$(ul_libmount_incdir) -I$(ul_libblkid_incdir)
 raw_SOURCES = disk-utils/raw.c
-#cramfs_common_sources = disk-utils/cramfs.h disk-utils/cramfs_common.c
-#fsck_cramfs_SOURCES = disk-utils/fsck.cramfs.c $(cramfs_common_sources)
-#fsck_cramfs_LDADD = $(LDADD) -lz libcommon.la
-#mkfs_cramfs_SOURCES = disk-utils/mkfs.cramfs.c $(cramfs_common_sources)
-#mkfs_cramfs_LDADD = $(LDADD) -lz libcommon.la
+cramfs_common_sources = disk-utils/cramfs.h disk-utils/cramfs_common.c
+fsck_cramfs_SOURCES = disk-utils/fsck.cramfs.c $(cramfs_common_sources)
+fsck_cramfs_LDADD = $(LDADD) -lz libcommon.la
+mkfs_cramfs_SOURCES = disk-utils/mkfs.cramfs.c $(cramfs_common_sources)
+mkfs_cramfs_LDADD = $(LDADD) -lz libcommon.la
 fdformat_SOURCES = disk-utils/fdformat.c
 fdformat_LDADD = $(LDADD) libcommon.la
 blockdev_SOURCES = disk-utils/blockdev.c
@@ -5516,15 +5516,15 @@ sfdisk_CFLAGS = $(AM_CFLAGS) -I$(ul_libfdisk_incdir) -I$(ul_libsmartcols_incdir)
 #sfdisk_static_LDFLAGS = -all-static
 #sfdisk_static_CFLAGS = $(sfdisk_CFLAGS)
 #sfdisk_static_LDADD = $(sfdisk_LDADD) $(READLINE_LIBS_STATIC)
-cfdisk_SOURCES = disk-utils/cfdisk.c
-cfdisk_LDADD = $(LDADD) libsmartcols.la \
-	libcommon.la libfdisk.la libtcolors.la \
-	$(am__append_381) $(am__append_382) \
-	$(am__append_384)
-cfdisk_CFLAGS = $(AM_CFLAGS) \
-	-I$(ul_libfdisk_incdir) \
-	-I$(ul_libsmartcols_incdir) \
-	$(am__append_380) $(am__append_383)
+#cfdisk_SOURCES = disk-utils/cfdisk.c
+#cfdisk_LDADD = $(LDADD) libsmartcols.la \
+#	libcommon.la libfdisk.la libtcolors.la \
+#	$(am__append_381) $(am__append_382) \
+#	$(am__append_384)
+#cfdisk_CFLAGS = $(AM_CFLAGS) \
+#	-I$(ul_libfdisk_incdir) \
+#	-I$(ul_libsmartcols_incdir) \
+#	$(am__append_380) $(am__append_383)
 addpart_SOURCES = disk-utils/addpart.c
 addpart_LDADD = $(LDADD) libcommon.la
 delpart_SOURCES = disk-utils/delpart.c

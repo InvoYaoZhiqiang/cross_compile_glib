@@ -166,10 +166,10 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the `ioperm' function. */
-#define HAVE_IOPERM 1
+/* #undef HAVE_IOPERM */
 
 /* Define to 1 if you have the `iopl' function. */
-#define HAVE_IOPL 1
+/* #undef HAVE_IOPL */
 
 /* Define to 1 if you have the `isnan' function. */
 #define HAVE_ISNAN 1
@@ -178,13 +178,13 @@
 #define HAVE_JRAND48 1
 
 /* Define if langinfo.h defines ALTMON_x constants */
-/* #undef HAVE_LANGINFO_ALTMON */
+#define HAVE_LANGINFO_ALTMON 1
 
 /* Define to 1 if you have the <langinfo.h> header file. */
 #define HAVE_LANGINFO_H 1
 
 /* Define if langinfo.h defines _NL_ABALTMON_x constants */
-/* #undef HAVE_LANGINFO_NL_ABALTMON */
+#define HAVE_LANGINFO_NL_ABALTMON 1
 
 /* Define to 1 if you have the <lastlog.h> header file. */
 #define HAVE_LASTLOG_H 1
@@ -211,7 +211,7 @@
 /* #undef HAVE_LIBNCURSES */
 
 /* Define if ncursesw library available */
-#define HAVE_LIBNCURSESW 1
+/* #undef HAVE_LIBNCURSESW */
 
 /* Define to 1 if you have the `readline' library (-lreadline). */
 /* #undef HAVE_LIBREADLINE */
@@ -226,7 +226,7 @@
 /* #undef HAVE_LIBSYSTEMD */
 
 /* Define if libtinfo or libtinfow available. */
-#define HAVE_LIBTINFO 1
+/* #undef HAVE_LIBTINFO */
 
 /* Define to 1 if you have the `udev' library (-ludev). */
 /* #undef HAVE_LIBUDEV */
@@ -334,7 +334,7 @@
 /* #undef HAVE_NCURSESW_TERM_H */
 
 /* Define to 1 if you have the <ncurses.h> header file. */
-#define HAVE_NCURSES_H 1
+/* #undef HAVE_NCURSES_H */
 
 /* Define to 1 if you have the <ncurses/ncurses.h> header file. */
 /* #undef HAVE_NCURSES_NCURSES_H */
@@ -394,7 +394,7 @@
 #define HAVE_REBOOT 1
 
 /* Define if curses library has the resizeterm(). */
-#define HAVE_RESIZETERM 1
+/* #undef HAVE_RESIZETERM */
 
 /* Define to 1 if you have the `rpmatch' function. */
 #define HAVE_RPMATCH 1
@@ -541,7 +541,7 @@
 #define HAVE_SYS_IOCTL_H 1
 
 /* Define to 1 if you have the <sys/io.h> header file. */
-#define HAVE_SYS_IO_H 1
+/* #undef HAVE_SYS_IO_H */
 
 /* Define to 1 if you have the <sys/mkdev.h> header file. */
 /* #undef HAVE_SYS_MKDEV_H */
@@ -598,7 +598,7 @@
 #define HAVE_SYS_UN_H 1
 
 /* Define to 1 if you have the <term.h> header file. */
-#define HAVE_TERM_H 1
+/* #undef HAVE_TERM_H */
 
 /* Define to 1 if you have the `timegm' function. */
 #define HAVE_TIMEGM 1
@@ -636,7 +636,7 @@
 #define HAVE_UPDWTMPX 1
 
 /* Define if curses library has the use_default_colors(). */
-#define HAVE_USE_DEFAULT_COLORS 1
+/* #undef HAVE_USE_DEFAULT_COLORS */
 
 /* Define to 1 if you have the `usleep' function. */
 #define HAVE_USLEEP 1
@@ -840,7 +840,7 @@
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
-#define _FILE_OFFSET_BITS 64
+/* #undef _FILE_OFFSET_BITS */
 
 /* Define to 1 to make fseeko visible on some hosts (e.g. glibc 2.2). */
 /* #undef _LARGEFILE_SOURCE */
